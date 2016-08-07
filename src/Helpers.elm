@@ -12,4 +12,4 @@ get_name_from_tuple inp =
 
 filter_data : Model -> String -> List (String, String)
 filter_data model filter =
-  List.filter (\el -> String.contains filter (String.toLower (get_name_from_tuple el))) model.data
+  List.filter (\el -> String.contains (String.toLower filter) (String.toLower (get_name_from_tuple el))) model.data

@@ -11,7 +11,7 @@ pair_to_li : (String,String) -> Html Msg
 pair_to_li pair =
   case pair of
     (a,b) ->
-      li [] [ text (a ++ " - " ++ b) ]
+      li [] [span [class "color-block", style [ ("background", b) ] ] [], text (" " ++ a ++ " - " ++ b) ]
 
 list_of_pairs : Model -> List (Html Msg)
 list_of_pairs model =

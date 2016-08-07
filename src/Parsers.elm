@@ -40,7 +40,7 @@ yaml_parser val =
           "yaml_parser : ERROR"
     -- all_matches = find All (regex "([\\w ]+):\\n  type: programming\\n  color: \"(#\\w+)\"") text
     -- all_matches = find All (regex "([\\w ]+):\\n[\\n\\w\\s:\\.]+color: \"(#\\w+)\"") text
-    all_matches = find All ( regex "([A-Z][\\w ]*):(?:\\n  \\w+:[\\w\\s\\-\\.]+)+color: \"(#\\w+)\"" ) text
+    all_matches = find All ( regex "([A-Z][\\w +#]*):(?:\\n  \\w+:[\\w\\s\\-\\.]+)+color: \"(#\\w+)\"" ) text
     list_data = List.map submatch_splitter all_matches
     dmsg = Debug.log "list_data" list_data
   in
