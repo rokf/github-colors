@@ -7,6 +7,19 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 
+pair_to_li : (String,String) -> Html Msg
+pair_to_li pair =
+  case pair of
+    (a,b) ->
+      li [] [ text (a ++ " - " ++ b) ]
+
+list_of_pairs : Model -> List (Html Msg)
+list_of_pairs model =
+  List.map (\pair -> (pair_to_li pair)) model.filtered_data
+
 view : Model -> Html Msg
 view model =
-  div [] [ text model.all_text ]
+  div []
+  [  input [onInput UpdateFilter, placeholder "filter"] []
+  ,  ul [] (list_of_pairs model)
+  ]

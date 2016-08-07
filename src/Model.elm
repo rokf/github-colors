@@ -6,12 +6,16 @@ import String
 import Messages exposing (..)
 
 type alias Model =
-  {  data : Dict.Dict String String
+  {  data : List (String, String)
   ,  all_text : String
+  ,  filter : String
+  ,  filtered_data : List (String, String)
   }
 
 initModel : Model
 initModel =
-  {  data = Dict.fromList [] -- empty
+  {  data = []
   ,  all_text = ""
+  ,  filter = ""
+  ,  filtered_data = [ ("Nothing", "#ffffff") ]
   }
