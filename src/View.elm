@@ -9,4 +9,4 @@ import Html.Events exposing (..)
 
 view : Model -> Html Msg
 view model =
-  div [] [text "View"]
+  div [] [ text model.all_text ]

@@ -7,9 +7,11 @@ import Messages exposing (..)
 
 type alias Model =
   {  data : Dict.Dict String String
+  ,  all_text : String
   }
 
-initModel : (Model, Cmd Msg)
+initModel : Model
 initModel =
   {  data = Dict.fromList [] -- empty
-  } ! []
+  ,  all_text = ""
+  }
