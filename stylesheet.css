@@ -1,0 +1,25 @@
+
+/* Stylesheet */
+
+@font-face{
+    font-family: 'Fira Code';
+    src: url('FiraCode-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.color-block {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50px;
+}
+
+ul {
+  list-style-type: none;
+  font-family: 'Fira Code';
+}
+
+li {
+  text-align: justify;
+}
