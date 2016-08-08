@@ -8926,14 +8926,13 @@ var _user$project$Update$update = F2(
 		switch (_p0.ctor) {
 			case 'HandleGetFile':
 				var _p1 = _p0._0;
+				var new_text = _user$project$Parsers$raw_text(_p1.value);
+				var new_data = _user$project$Parsers$yaml_parser(_p1.value);
 				return A2(
 					_elm_lang$core$Platform_Cmd_ops['!'],
 					_elm_lang$core$Native_Utils.update(
 						model,
-						{
-							data: _user$project$Parsers$yaml_parser(_p1.value),
-							all_text: _user$project$Parsers$raw_text(_p1.value)
-						}),
+						{data: new_data, all_text: new_text, filtered_data: new_data}),
 					_elm_lang$core$Native_List.fromArray(
 						[]));
 			case 'UpdateFilter':
