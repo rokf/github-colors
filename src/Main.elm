@@ -1,6 +1,4 @@
 
-import Html.App
-
 import Update exposing (..)
 import View exposing (..)
 import Messages exposing (..)
